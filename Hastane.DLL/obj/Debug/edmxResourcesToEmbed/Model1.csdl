@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HastahaneDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BireyselGelirler">
+    <Key>
+      <PropertyRef Name="BireyselGelirlerID" />
+    </Key>
+    <Property Name="BireyselGelirlerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GelirID" Type="Int32" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_BireyselGelirler_Kullanicilar" FromRole="BireyselGelirler" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="BireyselGiderler">
+    <Key>
+      <PropertyRef Name="BireyselGiderlerID" />
+    </Key>
+    <Property Name="BireyselGiderlerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BireyselGiderKod" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GiderID" Type="Int32" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Giderler" Relationship="Self.FK_BireyselGiderler_Giderler" FromRole="BireyselGiderler" ToRole="Giderler" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_BireyselGiderler_Kullanicilar" FromRole="BireyselGiderler" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="Branslar">
+    <Key>
+      <PropertyRef Name="BranslarID" />
+    </Key>
+    <Property Name="BranslarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BransAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Branslar_Kullanicilar" FromRole="Branslar" ToRole="Kullanicilar" />
+    <NavigationProperty Name="DoktorUnvanlari" Relationship="Self.FK_DoktorUnvanlari_Branslar" FromRole="Branslar" ToRole="DoktorUnvanlari" />
+  </EntityType>
+  <EntityType Name="DoktorBilgileri">
+    <Key>
+      <PropertyRef Name="DoktorBilgileriID" />
+    </Key>
+    <Property Name="DoktorBilgileriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DoktorID" Type="Int32" Nullable="false" />
+    <Property Name="GirisTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CikisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="AktifMi" Type="Boolean" Nullable="false" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Doktorlar" Relationship="Self.FK_DoktorBilgileri_Doktorlar" FromRole="DoktorBilgileri" ToRole="Doktorlar" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_DoktorBilgileri_Kullanicilar" FromRole="DoktorBilgileri" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="Doktorlar">
+    <Key>
+      <PropertyRef Name="DoktorlarID" />
+    </Key>
+    <Property Name="DoktorlarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DoktorTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorCinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="MedeniHali" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="DogumYeriID" Type="Int32" />
+    <Property Name="KanGrubuID" Type="Int32" />
+    <Property Name="DoktorUnvanID" Type="Int32" />
+    <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <Property Name="KlinikID" Type="Int32" />
+    <Property Name="Resim" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DoktorBilgileri" Relationship="Self.FK_DoktorBilgileri_Doktorlar" FromRole="Doktorlar" ToRole="DoktorBilgileri" />
+    <NavigationProperty Name="DoktorUnvanlari" Relationship="Self.FK_Doktorlar_DoktorUnvanlari" FromRole="Doktorlar" ToRole="DoktorUnvanlari" />
+    <NavigationProperty Name="iller" Relationship="Self.FK_Doktorlar_iller" FromRole="Doktorlar" ToRole="iller" />
+    <NavigationProperty Name="KanGruplari" Relationship="Self.FK_Doktorlar_KanGruplari" FromRole="Doktorlar" ToRole="KanGruplari" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Doktorlar_Kullanicilar" FromRole="Doktorlar" ToRole="Kullanicilar" />
+    <NavigationProperty Name="Klinikler" Relationship="HastahaneDBModel.FK_Doktorlar_Klinikler" FromRole="Doktorlar" ToRole="Klinikler" />
+  </EntityType>
+  <EntityType Name="DoktorUnvanlari">
+    <Key>
+      <PropertyRef Name="DoktorUnvanlariID" />
+    </Key>
+    <Property Name="DoktorUnvanlariID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnvanAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BransID" Type="Int32" Nullable="false" />
+    <Property Name="DiplomaNumarasi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Branslar" Relationship="Self.FK_DoktorUnvanlari_Branslar" FromRole="DoktorUnvanlari" ToRole="Branslar" />
+    <NavigationProperty Name="Doktorlar" Relationship="Self.FK_Doktorlar_DoktorUnvanlari" FromRole="DoktorUnvanlari" ToRole="Doktorlar" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_DoktorUnvanlari_Kullanicilar" FromRole="DoktorUnvanlari" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="Gelirler">
+    <Key>
+      <PropertyRef Name="GelirlerID" />
+    </Key>
+    <Property Name="GelirlerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GelirAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GelirMiktari" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Gelirler_Kullanicilar" FromRole="Gelirler" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="Giderler">
+    <Key>
+      <PropertyRef Name="GiderlerID" />
+    </Key>
+    <Property Name="GiderlerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GiderAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GiderMiktari" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="BireyselGiderler" Relationship="Self.FK_BireyselGiderler_Giderler" FromRole="Giderler" ToRole="BireyselGiderler" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Giderler_Kullanicilar" FromRole="Giderler" ToRole="Kullanicilar" />
+    <NavigationProperty Name="KurumsalGiderler" Relationship="Self.FK_KurumsalGiderler_Giderler" FromRole="Giderler" ToRole="KurumsalGiderler" />
+  </EntityType>
+  <EntityType Name="Hastalar">
+    <Key>
+      <PropertyRef Name="HastalarID" />
+    </Key>
+    <Property Name="HastalarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HastaTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="HastaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HastaSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="DogumYeriID" Type="Int32" />
+    <Property Name="MedeniHali" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KanGrubuID" Type="Int32" />
+    <Property Name="HastaKilo" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HastaBoy" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Acıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="iller" Relationship="Self.FK_Hastalar_iller" FromRole="Hastalar" ToRole="iller" />
+    <NavigationProperty Name="KanGruplari" Relationship="Self.FK_Hastalar_KanGruplari" FromRole="Hastalar" ToRole="KanGruplari" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Hastalar_Kullanicilar" FromRole="Hastalar" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="iller">
+    <Key>
+      <PropertyRef Name="illerID" />
+    </Key>
+    <Property Name="illerID" Type="Int32" Nullable="false" />
+    <Property Name="ilAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Doktorlar" Relationship="Self.FK_Doktorlar_iller" FromRole="iller" ToRole="Doktorlar" />
+    <NavigationProperty Name="Hastalar" Relationship="Self.FK_Hastalar_iller" FromRole="iller" ToRole="Hastalar" />
+    <NavigationProperty Name="Personeller" Relationship="Self.FK_Personeller_iller" FromRole="iller" ToRole="Personeller" />
+  </EntityType>
+  <EntityType Name="KanGruplari">
+    <Key>
+      <PropertyRef Name="KanGruplariID" />
+    </Key>
+    <Property Name="KanGruplariID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KanGrubuAdi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Doktorlar" Relationship="Self.FK_Doktorlar_KanGruplari" FromRole="KanGruplari" ToRole="Doktorlar" />
+    <NavigationProperty Name="Hastalar" Relationship="Self.FK_Hastalar_KanGruplari" FromRole="KanGruplari" ToRole="Hastalar" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_KanGruplari_Kullanicilar" FromRole="KanGruplari" ToRole="Kullanicilar" />
+    <NavigationProperty Name="Personeller" Relationship="Self.FK_Personeller_KanGruplari" FromRole="KanGruplari" ToRole="Personeller" />
+  </EntityType>
+  <EntityType Name="Klinikler">
+    <Key>
+      <PropertyRef Name="KliniklerID" />
+    </Key>
+    <Property Name="KliniklerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KlinikAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Klinikler_Kullanicilar" FromRole="Klinikler" ToRole="Kullanicilar" />
+    <NavigationProperty Name="Doktorlar" Relationship="HastahaneDBModel.FK_Doktorlar_Klinikler" FromRole="Klinikler" ToRole="Doktorlar" />
+  </EntityType>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="KullanicilarID" />
+    </Key>
+    <Property Name="KullanicilarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KullaniciSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YetkiID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BireyselGelirler" Relationship="Self.FK_BireyselGelirler_Kullanicilar" FromRole="Kullanicilar" ToRole="BireyselGelirler" />
+    <NavigationProperty Name="BireyselGiderler" Relationship="Self.FK_BireyselGiderler_Kullanicilar" FromRole="Kullanicilar" ToRole="BireyselGiderler" />
+    <NavigationProperty Name="Branslar" Relationship="Self.FK_Branslar_Kullanicilar" FromRole="Kullanicilar" ToRole="Branslar" />
+    <NavigationProperty Name="DoktorBilgileri" Relationship="Self.FK_DoktorBilgileri_Kullanicilar" FromRole="Kullanicilar" ToRole="DoktorBilgileri" />
+    <NavigationProperty Name="Doktorlar" Relationship="Self.FK_Doktorlar_Kullanicilar" FromRole="Kullanicilar" ToRole="Doktorlar" />
+    <NavigationProperty Name="DoktorUnvanlari" Relationship="Self.FK_DoktorUnvanlari_Kullanicilar" FromRole="Kullanicilar" ToRole="DoktorUnvanlari" />
+    <NavigationProperty Name="Gelirler" Relationship="Self.FK_Gelirler_Kullanicilar" FromRole="Kullanicilar" ToRole="Gelirler" />
+    <NavigationProperty Name="Giderler" Relationship="Self.FK_Giderler_Kullanicilar" FromRole="Kullanicilar" ToRole="Giderler" />
+    <NavigationProperty Name="Hastalar" Relationship="Self.FK_Hastalar_Kullanicilar" FromRole="Kullanicilar" ToRole="Hastalar" />
+    <NavigationProperty Name="KanGruplari" Relationship="Self.FK_KanGruplari_Kullanicilar" FromRole="Kullanicilar" ToRole="KanGruplari" />
+    <NavigationProperty Name="Klinikler" Relationship="Self.FK_Klinikler_Kullanicilar" FromRole="Kullanicilar" ToRole="Klinikler" />
+    <NavigationProperty Name="Yetkiler" Relationship="Self.FK_Kullanicilar_Yetkiler" FromRole="Kullanicilar" ToRole="Yetkiler" />
+    <NavigationProperty Name="KurumsalGelirler" Relationship="Self.FK_KurumsalGelirler_Kullanicilar" FromRole="Kullanicilar" ToRole="KurumsalGelirler" />
+    <NavigationProperty Name="KurumsalGiderler" Relationship="Self.FK_KurumsalGiderler_Kullanicilar" FromRole="Kullanicilar" ToRole="KurumsalGiderler" />
+    <NavigationProperty Name="Personeller" Relationship="Self.FK_Personeller_Kullanicilar" FromRole="Kullanicilar" ToRole="Personeller" />
+  </EntityType>
+  <EntityType Name="KurumsalGelirler">
+    <Key>
+      <PropertyRef Name="KurumsalGelirlerID" />
+    </Key>
+    <Property Name="KurumsalGelirlerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KurumAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KurumAdres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Kod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YetkiliTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YetkiliAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YetkiliSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GelirID" Type="Int32" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_KurumsalGelirler_Kullanicilar" FromRole="KurumsalGelirler" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="KurumsalGiderler">
+    <Key>
+      <PropertyRef Name="KurumsalGiderlerID" />
+    </Key>
+    <Property Name="KurumsalGiderlerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KurumAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KurumAdres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YetkiliTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YetkiliAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YetkiliSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KurumGiderKod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GiderID" Type="Int32" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="Giderler" Relationship="Self.FK_KurumsalGiderler_Giderler" FromRole="KurumsalGiderler" ToRole="Giderler" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_KurumsalGiderler_Kullanicilar" FromRole="KurumsalGiderler" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="Personeller">
+    <Key>
+      <PropertyRef Name="PersonellerID" />
+    </Key>
+    <Property Name="PersonellerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonelTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="PersonelAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PersonelSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Maas" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="DogumYeriID" Type="Int32" />
+    <Property Name="HesapNumarasi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MedeniHali" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="KanGrubuID" Type="Int32" />
+    <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciID" Type="Int32" />
+    <NavigationProperty Name="iller" Relationship="Self.FK_Personeller_iller" FromRole="Personeller" ToRole="iller" />
+    <NavigationProperty Name="KanGruplari" Relationship="Self.FK_Personeller_KanGruplari" FromRole="Personeller" ToRole="KanGruplari" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Personeller_Kullanicilar" FromRole="Personeller" ToRole="Kullanicilar" />
+  </EntityType>
+  <EntityType Name="Randevular">
+    <Key>
+      <PropertyRef Name="RandevularID" />
+    </Key>
+    <Property Name="RandevularID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HastaID" Type="Int32" Nullable="false" />
+    <Property Name="KlinikID" Type="Int32" Nullable="false" />
+    <Property Name="DoktorID" Type="Int32" Nullable="false" />
+    <Property Name="RandevuTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="RandevuSaati" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Yetkiler">
+    <Key>
+      <PropertyRef Name="YetkilerID" />
+    </Key>
+    <Property Name="YetkilerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YetkiAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kullanicilar" Relationship="Self.FK_Kullanicilar_Yetkiler" FromRole="Yetkiler" ToRole="Kullanicilar" />
+  </EntityType>
+  <Association Name="FK_BireyselGelirler_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="BireyselGelirler" Type="Self.BireyselGelirler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="BireyselGelirler">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BireyselGiderler_Giderler">
+    <End Role="Giderler" Type="Self.Giderler" Multiplicity="0..1" />
+    <End Role="BireyselGiderler" Type="Self.BireyselGiderler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Giderler">
+        <PropertyRef Name="GiderlerID" />
+      </Principal>
+      <Dependent Role="BireyselGiderler">
+        <PropertyRef Name="GiderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BireyselGiderler_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="BireyselGiderler" Type="Self.BireyselGiderler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="BireyselGiderler">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Branslar_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="Branslar" Type="Self.Branslar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="Branslar">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoktorUnvanlari_Branslar">
+    <End Role="Branslar" Type="Self.Branslar" Multiplicity="1" />
+    <End Role="DoktorUnvanlari" Type="Self.DoktorUnvanlari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branslar">
+        <PropertyRef Name="BranslarID" />
+      </Principal>
+      <Dependent Role="DoktorUnvanlari">
+        <PropertyRef Name="BransID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoktorBilgileri_Doktorlar">
+    <End Role="Doktorlar" Type="Self.Doktorlar" Multiplicity="1" />
+    <End Role="DoktorBilgileri" Type="Self.DoktorBilgileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doktorlar">
+        <PropertyRef Name="DoktorlarID" />
+      </Principal>
+      <Dependent Role="DoktorBilgileri">
+        <PropertyRef Name="DoktorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoktorBilgileri_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="DoktorBilgileri" Type="Self.DoktorBilgileri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="DoktorBilgileri">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doktorlar_DoktorUnvanlari">
+    <End Role="DoktorUnvanlari" Type="Self.DoktorUnvanlari" Multiplicity="0..1" />
+    <End Role="Doktorlar" Type="Self.Doktorlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoktorUnvanlari">
+        <PropertyRef Name="DoktorUnvanlariID" />
+      </Principal>
+      <Dependent Role="Doktorlar">
+        <PropertyRef Name="DoktorUnvanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doktorlar_iller">
+    <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+    <End Role="Doktorlar" Type="Self.Doktorlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="illerID" />
+      </Principal>
+      <Dependent Role="Doktorlar">
+        <PropertyRef Name="DogumYeriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doktorlar_KanGruplari">
+    <End Role="KanGruplari" Type="Self.KanGruplari" Multiplicity="0..1" />
+    <End Role="Doktorlar" Type="Self.Doktorlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KanGruplari">
+        <PropertyRef Name="KanGruplariID" />
+      </Principal>
+      <Dependent Role="Doktorlar">
+        <PropertyRef Name="KanGrubuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doktorlar_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="Doktorlar" Type="Self.Doktorlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="Doktorlar">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoktorUnvanlari_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="DoktorUnvanlari" Type="Self.DoktorUnvanlari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="DoktorUnvanlari">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gelirler_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="Gelirler" Type="Self.Gelirler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="Gelirler">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Giderler_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="Giderler" Type="Self.Giderler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="Giderler">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KurumsalGiderler_Giderler">
+    <End Role="Giderler" Type="Self.Giderler" Multiplicity="0..1" />
+    <End Role="KurumsalGiderler" Type="Self.KurumsalGiderler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Giderler">
+        <PropertyRef Name="GiderlerID" />
+      </Principal>
+      <Dependent Role="KurumsalGiderler">
+        <PropertyRef Name="GiderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hastalar_iller">
+    <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+    <End Role="Hastalar" Type="Self.Hastalar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="illerID" />
+      </Principal>
+      <Dependent Role="Hastalar">
+        <PropertyRef Name="DogumYeriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hastalar_KanGruplari">
+    <End Role="KanGruplari" Type="Self.KanGruplari" Multiplicity="0..1" />
+    <End Role="Hastalar" Type="Self.Hastalar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KanGruplari">
+        <PropertyRef Name="KanGruplariID" />
+      </Principal>
+      <Dependent Role="Hastalar">
+        <PropertyRef Name="KanGrubuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hastalar_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="Hastalar" Type="Self.Hastalar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="Hastalar">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personeller_iller">
+    <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="illerID" />
+      </Principal>
+      <Dependent Role="Personeller">
+        <PropertyRef Name="DogumYeriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KanGruplari_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="KanGruplari" Type="Self.KanGruplari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="KanGruplari">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personeller_KanGruplari">
+    <End Role="KanGruplari" Type="Self.KanGruplari" Multiplicity="0..1" />
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KanGruplari">
+        <PropertyRef Name="KanGruplariID" />
+      </Principal>
+      <Dependent Role="Personeller">
+        <PropertyRef Name="KanGrubuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Klinikler_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="Klinikler" Type="Self.Klinikler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="Klinikler">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanicilar_Yetkiler">
+    <End Role="Yetkiler" Type="Self.Yetkiler" Multiplicity="1" />
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Yetkiler">
+        <PropertyRef Name="YetkilerID" />
+      </Principal>
+      <Dependent Role="Kullanicilar">
+        <PropertyRef Name="YetkiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KurumsalGelirler_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="KurumsalGelirler" Type="Self.KurumsalGelirler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="KurumsalGelirler">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KurumsalGiderler_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="KurumsalGiderler" Type="Self.KurumsalGiderler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="KurumsalGiderler">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personeller_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="0..1" />
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="KullanicilarID" />
+      </Principal>
+      <Dependent Role="Personeller">
+        <PropertyRef Name="KullaniciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HastahaneDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BireyselGelirler" EntityType="Self.BireyselGelirler" />
+    <EntitySet Name="BireyselGiderler" EntityType="Self.BireyselGiderler" />
+    <EntitySet Name="Branslar" EntityType="Self.Branslar" />
+    <EntitySet Name="DoktorBilgileri" EntityType="Self.DoktorBilgileri" />
+    <EntitySet Name="Doktorlar" EntityType="Self.Doktorlar" />
+    <EntitySet Name="DoktorUnvanlari" EntityType="Self.DoktorUnvanlari" />
+    <EntitySet Name="Gelirler" EntityType="Self.Gelirler" />
+    <EntitySet Name="Giderler" EntityType="Self.Giderler" />
+    <EntitySet Name="Hastalar" EntityType="Self.Hastalar" />
+    <EntitySet Name="iller" EntityType="Self.iller" />
+    <EntitySet Name="KanGruplari" EntityType="Self.KanGruplari" />
+    <EntitySet Name="Klinikler" EntityType="Self.Klinikler" />
+    <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" />
+    <EntitySet Name="KurumsalGelirler" EntityType="Self.KurumsalGelirler" />
+    <EntitySet Name="KurumsalGiderler" EntityType="Self.KurumsalGiderler" />
+    <EntitySet Name="Personeller" EntityType="Self.Personeller" />
+    <EntitySet Name="Randevular" EntityType="Self.Randevular" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Yetkiler" EntityType="Self.Yetkiler" />
+    <AssociationSet Name="FK_BireyselGelirler_Kullanicilar" Association="Self.FK_BireyselGelirler_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="BireyselGelirler" EntitySet="BireyselGelirler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BireyselGiderler_Giderler" Association="Self.FK_BireyselGiderler_Giderler">
+      <End Role="Giderler" EntitySet="Giderler" />
+      <End Role="BireyselGiderler" EntitySet="BireyselGiderler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BireyselGiderler_Kullanicilar" Association="Self.FK_BireyselGiderler_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="BireyselGiderler" EntitySet="BireyselGiderler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Branslar_Kullanicilar" Association="Self.FK_Branslar_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="Branslar" EntitySet="Branslar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoktorUnvanlari_Branslar" Association="Self.FK_DoktorUnvanlari_Branslar">
+      <End Role="Branslar" EntitySet="Branslar" />
+      <End Role="DoktorUnvanlari" EntitySet="DoktorUnvanlari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoktorBilgileri_Doktorlar" Association="Self.FK_DoktorBilgileri_Doktorlar">
+      <End Role="Doktorlar" EntitySet="Doktorlar" />
+      <End Role="DoktorBilgileri" EntitySet="DoktorBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoktorBilgileri_Kullanicilar" Association="Self.FK_DoktorBilgileri_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="DoktorBilgileri" EntitySet="DoktorBilgileri" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doktorlar_DoktorUnvanlari" Association="Self.FK_Doktorlar_DoktorUnvanlari">
+      <End Role="DoktorUnvanlari" EntitySet="DoktorUnvanlari" />
+      <End Role="Doktorlar" EntitySet="Doktorlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doktorlar_iller" Association="Self.FK_Doktorlar_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="Doktorlar" EntitySet="Doktorlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doktorlar_KanGruplari" Association="Self.FK_Doktorlar_KanGruplari">
+      <End Role="KanGruplari" EntitySet="KanGruplari" />
+      <End Role="Doktorlar" EntitySet="Doktorlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doktorlar_Kullanicilar" Association="Self.FK_Doktorlar_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="Doktorlar" EntitySet="Doktorlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoktorUnvanlari_Kullanicilar" Association="Self.FK_DoktorUnvanlari_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="DoktorUnvanlari" EntitySet="DoktorUnvanlari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gelirler_Kullanicilar" Association="Self.FK_Gelirler_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="Gelirler" EntitySet="Gelirler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Giderler_Kullanicilar" Association="Self.FK_Giderler_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="Giderler" EntitySet="Giderler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KurumsalGiderler_Giderler" Association="Self.FK_KurumsalGiderler_Giderler">
+      <End Role="Giderler" EntitySet="Giderler" />
+      <End Role="KurumsalGiderler" EntitySet="KurumsalGiderler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hastalar_iller" Association="Self.FK_Hastalar_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="Hastalar" EntitySet="Hastalar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hastalar_KanGruplari" Association="Self.FK_Hastalar_KanGruplari">
+      <End Role="KanGruplari" EntitySet="KanGruplari" />
+      <End Role="Hastalar" EntitySet="Hastalar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hastalar_Kullanicilar" Association="Self.FK_Hastalar_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="Hastalar" EntitySet="Hastalar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personeller_iller" Association="Self.FK_Personeller_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="Personeller" EntitySet="Personeller" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KanGruplari_Kullanicilar" Association="Self.FK_KanGruplari_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="KanGruplari" EntitySet="KanGruplari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personeller_KanGruplari" Association="Self.FK_Personeller_KanGruplari">
+      <End Role="KanGruplari" EntitySet="KanGruplari" />
+      <End Role="Personeller" EntitySet="Personeller" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Klinikler_Kullanicilar" Association="Self.FK_Klinikler_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="Klinikler" EntitySet="Klinikler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanicilar_Yetkiler" Association="Self.FK_Kullanicilar_Yetkiler">
+      <End Role="Yetkiler" EntitySet="Yetkiler" />
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KurumsalGelirler_Kullanicilar" Association="Self.FK_KurumsalGelirler_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="KurumsalGelirler" EntitySet="KurumsalGelirler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KurumsalGiderler_Kullanicilar" Association="Self.FK_KurumsalGiderler_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="KurumsalGiderler" EntitySet="KurumsalGiderler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personeller_Kullanicilar" Association="Self.FK_Personeller_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="Personeller" EntitySet="Personeller" />
+    </AssociationSet>
+    <EntitySet Name="vw_BireyselGelirler" EntityType="HastahaneDBModel.vw_BireyselGelirler" />
+    <EntitySet Name="vw_BireyselGiderler" EntityType="HastahaneDBModel.vw_BireyselGiderler" />
+    <EntitySet Name="vw_Branslar" EntityType="HastahaneDBModel.vw_Branslar" />
+    <EntitySet Name="vw_Doktorlar" EntityType="HastahaneDBModel.vw_Doktorlar" />
+    <EntitySet Name="vw_DoktorUnvanlari" EntityType="HastahaneDBModel.vw_DoktorUnvanlari" />
+    <EntitySet Name="vw_Gelirler" EntityType="HastahaneDBModel.vw_Gelirler" />
+    <EntitySet Name="vw_Giderler" EntityType="HastahaneDBModel.vw_Giderler" />
+    <EntitySet Name="vw_Hastalar" EntityType="HastahaneDBModel.vw_Hastalar" />
+    <EntitySet Name="vw_KanGruplari" EntityType="HastahaneDBModel.vw_KanGruplari" />
+    <EntitySet Name="vw_klinikler" EntityType="HastahaneDBModel.vw_klinikler" />
+    <EntitySet Name="vw_Kullanicilar" EntityType="HastahaneDBModel.vw_Kullanicilar" />
+    <EntitySet Name="vw_KurumsalGelirler" EntityType="HastahaneDBModel.vw_KurumsalGelirler" />
+    <EntitySet Name="vw_KurumsalGiderler" EntityType="HastahaneDBModel.vw_KurumsalGiderler" />
+    <EntitySet Name="vw_Personeller" EntityType="HastahaneDBModel.vw_Personeller" />
+    <EntitySet Name="vw_Randevular" EntityType="HastahaneDBModel.vw_Randevular" />
+    <EntitySet Name="vw2_DoktorBilgileri" EntityType="HastahaneDBModel.vw2_DoktorBilgileri" />
+    <EntitySet Name="vw_DoktorBilgileri" EntityType="HastahaneDBModel.vw_DoktorBilgileri" />
+    <AssociationSet Name="FK_Doktorlar_Klinikler" Association="HastahaneDBModel.FK_Doktorlar_Klinikler">
+      <End Role="Klinikler" EntitySet="Klinikler" />
+      <End Role="Doktorlar" EntitySet="Doktorlar" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="vw_BireyselGelirler">
+    <Key>
+      <PropertyRef Name="BireyselGelirlerID" />
+      <PropertyRef Name="TC" />
+      <PropertyRef Name="Adi" />
+      <PropertyRef Name="Soyadi" />
+      <PropertyRef Name="Kod" />
+    </Key>
+    <Property Name="BireyselGelirlerID" Type="Int32" Nullable="false" />
+    <Property Name="TC" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="Adi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyadi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Kod" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GelirAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_BireyselGiderler">
+    <Key>
+      <PropertyRef Name="BireyselGiderlerID" />
+      <PropertyRef Name="TC" />
+      <PropertyRef Name="Adi" />
+      <PropertyRef Name="Soyadi" />
+      <PropertyRef Name="BireyselGiderKod" />
+    </Key>
+    <Property Name="BireyselGiderlerID" Type="Int32" Nullable="false" />
+    <Property Name="TC" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="Adi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soyadi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BireyselGiderKod" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GiderAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_Branslar">
+    <Key>
+      <PropertyRef Name="BranslarID" />
+      <PropertyRef Name="BransAdi" />
+    </Key>
+    <Property Name="BranslarID" Type="Int32" Nullable="false" />
+    <Property Name="BransAdi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_Doktorlar">
+    <Key>
+      <PropertyRef Name="DoktorlarID" />
+    </Key>
+    <Property Name="DoktorlarID" Type="Int32" Nullable="false" />
+    <Property Name="DoktorTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorCinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="MedeniHali" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="ilAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KanGrubuAdi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UnvanAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KlinikAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_DoktorUnvanlari">
+    <Key>
+      <PropertyRef Name="DoktorUnvanlariID" />
+      <PropertyRef Name="UnvanAdi" />
+      <PropertyRef Name="DiplomaNumarasi" />
+    </Key>
+    <Property Name="DoktorUnvanlariID" Type="Int32" Nullable="false" />
+    <Property Name="UnvanAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BransAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiplomaNumarasi" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_Gelirler">
+    <Key>
+      <PropertyRef Name="GelirlerID" />
+      <PropertyRef Name="GelirAdi" />
+      <PropertyRef Name="GelirMiktari" />
+    </Key>
+    <Property Name="GelirlerID" Type="Int32" Nullable="false" />
+    <Property Name="GelirAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GelirMiktari" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_Giderler">
+    <Key>
+      <PropertyRef Name="GiderlerID" />
+      <PropertyRef Name="GiderAdi" />
+      <PropertyRef Name="GiderMiktari" />
+    </Key>
+    <Property Name="GiderlerID" Type="Int32" Nullable="false" />
+    <Property Name="GiderAdi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GiderMiktari" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_Hastalar">
+    <Key>
+      <PropertyRef Name="HastalarID" />
+    </Key>
+    <Property Name="HastalarID" Type="Int32" Nullable="false" />
+    <Property Name="HastaTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="HastaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HastaSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="ilAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MedeniHali" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KanGrubuAdi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HastaKilo" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="HastaBoy" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Acıklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_KanGruplari">
+    <Key>
+      <PropertyRef Name="KanGruplariID" />
+      <PropertyRef Name="KanGrubuAdi" />
+    </Key>
+    <Property Name="KanGruplariID" Type="Int32" Nullable="false" />
+    <Property Name="KanGrubuAdi" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_klinikler">
+    <Key>
+      <PropertyRef Name="KliniklerID" />
+    </Key>
+    <Property Name="KliniklerID" Type="Int32" Nullable="false" />
+    <Property Name="KlinikAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_Kullanicilar">
+    <Key>
+      <PropertyRef Name="KullanicilarID" />
+      <PropertyRef Name="KullaniciTC" />
+      <PropertyRef Name="KullaniciAdi" />
+      <PropertyRef Name="KullaniciSifre" />
+    </Key>
+    <Property Name="KullanicilarID" Type="Int32" Nullable="false" />
+    <Property Name="KullaniciTC" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciSifre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YetkiAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_KurumsalGelirler">
+    <Key>
+      <PropertyRef Name="KurumsalGelirlerID" />
+      <PropertyRef Name="KurumAdi" />
+      <PropertyRef Name="KurumAdres" />
+      <PropertyRef Name="Kod" />
+      <PropertyRef Name="YetkiliTC" />
+      <PropertyRef Name="YetkiliAdi" />
+      <PropertyRef Name="YetkiliSoyadi" />
+    </Key>
+    <Property Name="KurumsalGelirlerID" Type="Int32" Nullable="false" />
+    <Property Name="KurumAdi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KurumAdres" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Kod" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YetkiliTC" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="YetkiliAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YetkiliSoyadi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GelirAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_KurumsalGiderler">
+    <Key>
+      <PropertyRef Name="KurumsalGiderlerID" />
+      <PropertyRef Name="KurumAdi" />
+      <PropertyRef Name="KurumAdres" />
+      <PropertyRef Name="YetkiliTC" />
+      <PropertyRef Name="YetkiliAdi" />
+      <PropertyRef Name="YetkiliSoyadi" />
+      <PropertyRef Name="KurumGiderKod" />
+    </Key>
+    <Property Name="KurumsalGiderlerID" Type="Int32" Nullable="false" />
+    <Property Name="KurumAdi" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KurumAdres" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="YetkiliTC" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="YetkiliAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="YetkiliSoyadi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KurumGiderKod" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GiderAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_Personeller">
+    <Key>
+      <PropertyRef Name="PersonellerID" />
+    </Key>
+    <Property Name="PersonellerID" Type="Int32" Nullable="false" />
+    <Property Name="PersonelTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="PersonelAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PersonelSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Maas" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="ilAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HesapNumarasi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MedeniHali" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="KanGrubuAdi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_Randevular">
+    <Key>
+      <PropertyRef Name="RandevularID" />
+      <PropertyRef Name="RandevuTarihi" />
+      <PropertyRef Name="RandevuSaati" />
+    </Key>
+    <Property Name="RandevularID" Type="Int32" Nullable="false" />
+    <Property Name="HastaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KlinikAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RandevuTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="RandevuSaati" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw2_DoktorBilgileri">
+    <Key>
+      <PropertyRef Name="DoktorBilgileriID" />
+      <PropertyRef Name="GirisTarihi" />
+      <PropertyRef Name="AktifMi" />
+    </Key>
+    <Property Name="DoktorBilgileriID" Type="Int32" Nullable="false" />
+    <Property Name="DoktorAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GirisTarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CikisTarihi" Type="DateTime" Precision="0" />
+    <Property Name="AktifMi" Type="Boolean" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_DoktorBilgileri">
+    <Key>
+      <PropertyRef Name="DoktorlarID" />
+    </Key>
+    <Property Name="DoktorlarID" Type="Int32" Nullable="false" />
+    <Property Name="DoktorTC" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorSoyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DoktorTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UnvanAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="KanGrubuAdi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ilAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Doktorlar_Klinikler">
+    <End Type="HastahaneDBModel.Klinikler" Role="Klinikler" Multiplicity="0..1" />
+    <End Type="HastahaneDBModel.Doktorlar" Role="Doktorlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Klinikler">
+        <PropertyRef Name="KliniklerID" />
+      </Principal>
+      <Dependent Role="Doktorlar">
+        <PropertyRef Name="KlinikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

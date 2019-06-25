@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ce5a790ce94e455ba634c8645945d7f9" Name="Diagram1">
+        <EntityTypeShape EntityType="HastahaneDBModel.BireyselGelirler" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.BireyselGiderler" Width="1.5" PointX="7.5" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Branslar" Width="1.5" PointX="5.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.DoktorBilgileri" Width="1.5" PointX="15" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Doktorlar" Width="1.5" PointX="12.75" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.DoktorUnvanlari" Width="1.5" PointX="7.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Gelirler" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Giderler" Width="1.5" PointX="5.25" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Hastalar" Width="1.5" PointX="7.5" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.iller" Width="1.5" PointX="10.5" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.KanGruplari" Width="1.5" PointX="5.25" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Klinikler" Width="1.5" PointX="5.25" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Kullanicilar" Width="1.5" PointX="3" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.KurumsalGelirler" Width="1.5" PointX="5.25" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.KurumsalGiderler" Width="1.5" PointX="10.5" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Personeller" Width="1.5" PointX="10.5" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Randevular" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HastahaneDBModel.Yetkiler" Width="1.5" PointX="0.75" PointY="19.625" IsExpanded="true" />
+        <AssociationConnector Association="HastahaneDBModel.FK_BireyselGelirler_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_BireyselGiderler_Giderler" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_BireyselGiderler_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Branslar_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_DoktorUnvanlari_Branslar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_DoktorBilgileri_Doktorlar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_DoktorBilgileri_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Doktorlar_DoktorUnvanlari" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Doktorlar_iller" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Doktorlar_KanGruplari" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Doktorlar_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_DoktorUnvanlari_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Gelirler_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Giderler_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_KurumsalGiderler_Giderler" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Hastalar_iller" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Hastalar_KanGruplari" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Hastalar_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Personeller_iller" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_KanGruplari_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Personeller_KanGruplari" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Klinikler_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Kullanicilar_Yetkiler" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_KurumsalGelirler_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_KurumsalGiderler_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Personeller_Kullanicilar" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_BireyselGelirler" Width="1.5" PointX="3.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_BireyselGiderler" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_Branslar" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_Doktorlar" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_DoktorUnvanlari" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_Gelirler" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_Giderler" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_Hastalar" Width="1.5" PointX="7.75" PointY="6.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_KanGruplari" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_klinikler" Width="1.5" PointX="9.75" PointY="3.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_Kullanicilar" Width="1.5" PointX="9.75" PointY="6.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_KurumsalGelirler" Width="1.5" PointX="9.75" PointY="9.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_KurumsalGiderler" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_Personeller" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_Randevular" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw2_DoktorBilgileri" Width="1.5" PointX="11.75" PointY="4.75" />
+        <EntityTypeShape EntityType="HastahaneDBModel.vw_DoktorBilgileri" Width="1.5" PointX="12.375" PointY="7.75" />
+        <AssociationConnector Association="HastahaneDBModel.FK_Doktorlar_Klinikler" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

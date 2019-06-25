@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87C85A2B-4AA8-496A-A5EE-098244B33C74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hastane.UI</RootNamespace>
+    <AssemblyName>Hastane.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmBransKayitGuncelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBransKayitGuncelSil.Designer.cs">
+      <DependentUpon>FrmBransKayitGuncelSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDokBilgKayitGuncelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDokBilgKayitGuncelSil.Designer.cs">
+      <DependentUpon>FrmDokBilgKayitGuncelSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDoktorKayitGuncelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDoktorKayitGuncelSil.Designer.cs">
+      <DependentUpon>FrmDoktorKayitGuncelSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDoktorlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDoktorlar.Designer.cs">
+      <DependentUpon>FrmDoktorlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDokUnvKayitGuncelSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDokUnvKayitGuncelSil.Designer.cs">
+      <DependentUpon>FrmDokUnvKayitGuncelSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiris.Designer.cs">
+      <DependentUpon>FrmGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHastalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHastalar.Designer.cs">
+      <DependentUpon>FrmHastalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKlinikler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKlinikler.Designer.cs">
+      <DependentUpon>FrmKlinikler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMuhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMuhasebe.Designer.cs">
+      <DependentUpon>FrmMuhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersoneller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersoneller.Designer.cs">
+      <DependentUpon>FrmPersoneller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRandevular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRandevular.Designer.cs">
+      <DependentUpon>FrmRandevular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmYeniKullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmYeniKullanici.Designer.cs">
+      <DependentUpon>FrmYeniKullanici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmYoneticiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmYoneticiler.Designer.cs">
+      <DependentUpon>FrmYoneticiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBransKayitGuncelSil.resx">
+      <DependentUpon>FrmBransKayitGuncelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDokBilgKayitGuncelSil.resx">
+      <DependentUpon>FrmDokBilgKayitGuncelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoktorKayitGuncelSil.resx">
+      <DependentUpon>FrmDoktorKayitGuncelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoktorlar.resx">
+      <DependentUpon>FrmDoktorlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDokUnvKayitGuncelSil.resx">
+      <DependentUpon>FrmDokUnvKayitGuncelSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiris.resx">
+      <DependentUpon>FrmGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHastalar.resx">
+      <DependentUpon>FrmHastalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRandevular.resx">
+      <DependentUpon>FrmRandevular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmYeniKullanici.resx">
+      <DependentUpon>FrmYeniKullanici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hastane.BLL\Hastane.BLL.csproj">
+      <Project>{64e371ae-8425-4777-81d4-64526893fefa}</Project>
+      <Name>Hastane.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hastane.DLL\Hastane.DLL.csproj">
+      <Project>{a842916f-b1ce-4122-9fb6-bd339d708f2e}</Project>
+      <Name>Hastane.DLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doktorlar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gelir Gider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hastalar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Klinikler.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Personel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Randevular.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yoneticiler.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\resim-yok.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

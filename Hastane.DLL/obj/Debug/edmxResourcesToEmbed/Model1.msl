@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HastahaneDBModelStoreContainer" CdmEntityContainer="HastahaneDBEntities">
+    <EntitySetMapping Name="BireyselGelirler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.BireyselGelirler">
+        <MappingFragment StoreEntitySet="BireyselGelirler">
+          <ScalarProperty Name="BireyselGelirlerID" ColumnName="BireyselGelirlerID" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="GelirID" ColumnName="GelirID" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BireyselGiderler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.BireyselGiderler">
+        <MappingFragment StoreEntitySet="BireyselGiderler">
+          <ScalarProperty Name="BireyselGiderlerID" ColumnName="BireyselGiderlerID" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="BireyselGiderKod" ColumnName="BireyselGiderKod" />
+          <ScalarProperty Name="GiderID" ColumnName="GiderID" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branslar">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Branslar">
+        <MappingFragment StoreEntitySet="Branslar">
+          <ScalarProperty Name="BranslarID" ColumnName="BranslarID" />
+          <ScalarProperty Name="BransAdi" ColumnName="BransAdi" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoktorBilgileri">
+      <EntityTypeMapping TypeName="HastahaneDBModel.DoktorBilgileri">
+        <MappingFragment StoreEntitySet="DoktorBilgileri">
+          <ScalarProperty Name="DoktorBilgileriID" ColumnName="DoktorBilgileriID" />
+          <ScalarProperty Name="DoktorID" ColumnName="DoktorID" />
+          <ScalarProperty Name="GirisTarihi" ColumnName="GirisTarihi" />
+          <ScalarProperty Name="CikisTarihi" ColumnName="CikisTarihi" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doktorlar">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Doktorlar">
+        <MappingFragment StoreEntitySet="Doktorlar">
+          <ScalarProperty Name="DoktorlarID" ColumnName="DoktorlarID" />
+          <ScalarProperty Name="DoktorTC" ColumnName="DoktorTC" />
+          <ScalarProperty Name="DoktorAdi" ColumnName="DoktorAdi" />
+          <ScalarProperty Name="DoktorSoyadi" ColumnName="DoktorSoyadi" />
+          <ScalarProperty Name="DoktorCinsiyet" ColumnName="DoktorCinsiyet" />
+          <ScalarProperty Name="DoktorTelefon" ColumnName="DoktorTelefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="DogumYeriID" ColumnName="DogumYeriID" />
+          <ScalarProperty Name="KanGrubuID" ColumnName="KanGrubuID" />
+          <ScalarProperty Name="DoktorUnvanID" ColumnName="DoktorUnvanID" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+          <ScalarProperty Name="KlinikID" ColumnName="KlinikID" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoktorUnvanlari">
+      <EntityTypeMapping TypeName="HastahaneDBModel.DoktorUnvanlari">
+        <MappingFragment StoreEntitySet="DoktorUnvanlari">
+          <ScalarProperty Name="DoktorUnvanlariID" ColumnName="DoktorUnvanlariID" />
+          <ScalarProperty Name="UnvanAdi" ColumnName="UnvanAdi" />
+          <ScalarProperty Name="BransID" ColumnName="BransID" />
+          <ScalarProperty Name="DiplomaNumarasi" ColumnName="DiplomaNumarasi" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gelirler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Gelirler">
+        <MappingFragment StoreEntitySet="Gelirler">
+          <ScalarProperty Name="GelirlerID" ColumnName="GelirlerID" />
+          <ScalarProperty Name="GelirAdi" ColumnName="GelirAdi" />
+          <ScalarProperty Name="GelirMiktari" ColumnName="GelirMiktari" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Giderler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Giderler">
+        <MappingFragment StoreEntitySet="Giderler">
+          <ScalarProperty Name="GiderlerID" ColumnName="GiderlerID" />
+          <ScalarProperty Name="GiderAdi" ColumnName="GiderAdi" />
+          <ScalarProperty Name="GiderMiktari" ColumnName="GiderMiktari" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hastalar">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Hastalar">
+        <MappingFragment StoreEntitySet="Hastalar">
+          <ScalarProperty Name="HastalarID" ColumnName="HastalarID" />
+          <ScalarProperty Name="HastaTC" ColumnName="HastaTC" />
+          <ScalarProperty Name="HastaAdi" ColumnName="HastaAdi" />
+          <ScalarProperty Name="HastaSoyadi" ColumnName="HastaSoyadi" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="DogumYeriID" ColumnName="DogumYeriID" />
+          <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="KanGrubuID" ColumnName="KanGrubuID" />
+          <ScalarProperty Name="HastaKilo" ColumnName="HastaKilo" />
+          <ScalarProperty Name="HastaBoy" ColumnName="HastaBoy" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Acıklama" ColumnName="Acıklama" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iller">
+      <EntityTypeMapping TypeName="HastahaneDBModel.iller">
+        <MappingFragment StoreEntitySet="iller">
+          <ScalarProperty Name="illerID" ColumnName="illerID" />
+          <ScalarProperty Name="ilAdi" ColumnName="ilAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KanGruplari">
+      <EntityTypeMapping TypeName="HastahaneDBModel.KanGruplari">
+        <MappingFragment StoreEntitySet="KanGruplari">
+          <ScalarProperty Name="KanGruplariID" ColumnName="KanGruplariID" />
+          <ScalarProperty Name="KanGrubuAdi" ColumnName="KanGrubuAdi" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klinikler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Klinikler">
+        <MappingFragment StoreEntitySet="Klinikler">
+          <ScalarProperty Name="KliniklerID" ColumnName="KliniklerID" />
+          <ScalarProperty Name="KlinikAdi" ColumnName="KlinikAdi" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanicilar">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Kullanicilar">
+        <MappingFragment StoreEntitySet="Kullanicilar">
+          <ScalarProperty Name="KullanicilarID" ColumnName="KullanicilarID" />
+          <ScalarProperty Name="KullaniciTC" ColumnName="KullaniciTC" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="KullaniciSifre" ColumnName="KullaniciSifre" />
+          <ScalarProperty Name="YetkiID" ColumnName="YetkiID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KurumsalGelirler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.KurumsalGelirler">
+        <MappingFragment StoreEntitySet="KurumsalGelirler">
+          <ScalarProperty Name="KurumsalGelirlerID" ColumnName="KurumsalGelirlerID" />
+          <ScalarProperty Name="KurumAdi" ColumnName="KurumAdi" />
+          <ScalarProperty Name="KurumAdres" ColumnName="KurumAdres" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="YetkiliTC" ColumnName="YetkiliTC" />
+          <ScalarProperty Name="YetkiliAdi" ColumnName="YetkiliAdi" />
+          <ScalarProperty Name="YetkiliSoyadi" ColumnName="YetkiliSoyadi" />
+          <ScalarProperty Name="GelirID" ColumnName="GelirID" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KurumsalGiderler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.KurumsalGiderler">
+        <MappingFragment StoreEntitySet="KurumsalGiderler">
+          <ScalarProperty Name="KurumsalGiderlerID" ColumnName="KurumsalGiderlerID" />
+          <ScalarProperty Name="KurumAdi" ColumnName="KurumAdi" />
+          <ScalarProperty Name="KurumAdres" ColumnName="KurumAdres" />
+          <ScalarProperty Name="YetkiliTC" ColumnName="YetkiliTC" />
+          <ScalarProperty Name="YetkiliAdi" ColumnName="YetkiliAdi" />
+          <ScalarProperty Name="YetkiliSoyadi" ColumnName="YetkiliSoyadi" />
+          <ScalarProperty Name="KurumGiderKod" ColumnName="KurumGiderKod" />
+          <ScalarProperty Name="GiderID" ColumnName="GiderID" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personeller">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Personeller">
+        <MappingFragment StoreEntitySet="Personeller">
+          <ScalarProperty Name="PersonellerID" ColumnName="PersonellerID" />
+          <ScalarProperty Name="PersonelTC" ColumnName="PersonelTC" />
+          <ScalarProperty Name="PersonelAdi" ColumnName="PersonelAdi" />
+          <ScalarProperty Name="PersonelSoyadi" ColumnName="PersonelSoyadi" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="Maas" ColumnName="Maas" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="DogumYeriID" ColumnName="DogumYeriID" />
+          <ScalarProperty Name="HesapNumarasi" ColumnName="HesapNumarasi" />
+          <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="KanGrubuID" ColumnName="KanGrubuID" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Randevular">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Randevular">
+        <MappingFragment StoreEntitySet="Randevular">
+          <ScalarProperty Name="RandevularID" ColumnName="RandevularID" />
+          <ScalarProperty Name="HastaID" ColumnName="HastaID" />
+          <ScalarProperty Name="KlinikID" ColumnName="KlinikID" />
+          <ScalarProperty Name="DoktorID" ColumnName="DoktorID" />
+          <ScalarProperty Name="RandevuTarihi" ColumnName="RandevuTarihi" />
+          <ScalarProperty Name="RandevuSaati" ColumnName="RandevuSaati" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="HastahaneDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yetkiler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.Yetkiler">
+        <MappingFragment StoreEntitySet="Yetkiler">
+          <ScalarProperty Name="YetkilerID" ColumnName="YetkilerID" />
+          <ScalarProperty Name="YetkiAdi" ColumnName="YetkiAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_BireyselGelirler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_BireyselGelirler">
+        <MappingFragment StoreEntitySet="vw_BireyselGelirler">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="GelirAdi" ColumnName="GelirAdi" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="BireyselGelirlerID" ColumnName="BireyselGelirlerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_BireyselGiderler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_BireyselGiderler">
+        <MappingFragment StoreEntitySet="vw_BireyselGiderler">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="GiderAdi" ColumnName="GiderAdi" />
+          <ScalarProperty Name="BireyselGiderKod" ColumnName="BireyselGiderKod" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="BireyselGiderlerID" ColumnName="BireyselGiderlerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Branslar">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_Branslar">
+        <MappingFragment StoreEntitySet="vw_Branslar">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="BransAdi" ColumnName="BransAdi" />
+          <ScalarProperty Name="BranslarID" ColumnName="BranslarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Doktorlar">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_Doktorlar">
+        <MappingFragment StoreEntitySet="vw_Doktorlar">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="KlinikAdi" ColumnName="KlinikAdi" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="UnvanAdi" ColumnName="UnvanAdi" />
+          <ScalarProperty Name="KanGrubuAdi" ColumnName="KanGrubuAdi" />
+          <ScalarProperty Name="ilAdi" ColumnName="ilAdi" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DoktorTelefon" ColumnName="DoktorTelefon" />
+          <ScalarProperty Name="DoktorCinsiyet" ColumnName="DoktorCinsiyet" />
+          <ScalarProperty Name="DoktorSoyadi" ColumnName="DoktorSoyadi" />
+          <ScalarProperty Name="DoktorAdi" ColumnName="DoktorAdi" />
+          <ScalarProperty Name="DoktorTC" ColumnName="DoktorTC" />
+          <ScalarProperty Name="DoktorlarID" ColumnName="DoktorlarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_DoktorUnvanlari">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_DoktorUnvanlari">
+        <MappingFragment StoreEntitySet="vw_DoktorUnvanlari">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="DiplomaNumarasi" ColumnName="DiplomaNumarasi" />
+          <ScalarProperty Name="BransAdi" ColumnName="BransAdi" />
+          <ScalarProperty Name="UnvanAdi" ColumnName="UnvanAdi" />
+          <ScalarProperty Name="DoktorUnvanlariID" ColumnName="DoktorUnvanlariID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Gelirler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_Gelirler">
+        <MappingFragment StoreEntitySet="vw_Gelirler">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="GelirMiktari" ColumnName="GelirMiktari" />
+          <ScalarProperty Name="GelirAdi" ColumnName="GelirAdi" />
+          <ScalarProperty Name="GelirlerID" ColumnName="GelirlerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Giderler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_Giderler">
+        <MappingFragment StoreEntitySet="vw_Giderler">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="GiderMiktari" ColumnName="GiderMiktari" />
+          <ScalarProperty Name="GiderAdi" ColumnName="GiderAdi" />
+          <ScalarProperty Name="GiderlerID" ColumnName="GiderlerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Hastalar">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_Hastalar">
+        <MappingFragment StoreEntitySet="vw_Hastalar">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Acıklama" ColumnName="Acıklama" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="HastaBoy" ColumnName="HastaBoy" />
+          <ScalarProperty Name="HastaKilo" ColumnName="HastaKilo" />
+          <ScalarProperty Name="KanGrubuAdi" ColumnName="KanGrubuAdi" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+          <ScalarProperty Name="ilAdi" ColumnName="ilAdi" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="HastaSoyadi" ColumnName="HastaSoyadi" />
+          <ScalarProperty Name="HastaAdi" ColumnName="HastaAdi" />
+          <ScalarProperty Name="HastaTC" ColumnName="HastaTC" />
+          <ScalarProperty Name="HastalarID" ColumnName="HastalarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_KanGruplari">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_KanGruplari">
+        <MappingFragment StoreEntitySet="vw_KanGruplari">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="KanGrubuAdi" ColumnName="KanGrubuAdi" />
+          <ScalarProperty Name="KanGruplariID" ColumnName="KanGruplariID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_klinikler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_klinikler">
+        <MappingFragment StoreEntitySet="vw_klinikler">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="KlinikAdi" ColumnName="KlinikAdi" />
+          <ScalarProperty Name="KliniklerID" ColumnName="KliniklerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Kullanicilar">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_Kullanicilar">
+        <MappingFragment StoreEntitySet="vw_Kullanicilar">
+          <ScalarProperty Name="YetkiAdi" ColumnName="YetkiAdi" />
+          <ScalarProperty Name="KullaniciSifre" ColumnName="KullaniciSifre" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="KullaniciTC" ColumnName="KullaniciTC" />
+          <ScalarProperty Name="KullanicilarID" ColumnName="KullanicilarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_KurumsalGelirler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_KurumsalGelirler">
+        <MappingFragment StoreEntitySet="vw_KurumsalGelirler">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="GelirAdi" ColumnName="GelirAdi" />
+          <ScalarProperty Name="YetkiliSoyadi" ColumnName="YetkiliSoyadi" />
+          <ScalarProperty Name="YetkiliAdi" ColumnName="YetkiliAdi" />
+          <ScalarProperty Name="YetkiliTC" ColumnName="YetkiliTC" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="KurumAdres" ColumnName="KurumAdres" />
+          <ScalarProperty Name="KurumAdi" ColumnName="KurumAdi" />
+          <ScalarProperty Name="KurumsalGelirlerID" ColumnName="KurumsalGelirlerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_KurumsalGiderler">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_KurumsalGiderler">
+        <MappingFragment StoreEntitySet="vw_KurumsalGiderler">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="GiderAdi" ColumnName="GiderAdi" />
+          <ScalarProperty Name="KurumGiderKod" ColumnName="KurumGiderKod" />
+          <ScalarProperty Name="YetkiliSoyadi" ColumnName="YetkiliSoyadi" />
+          <ScalarProperty Name="YetkiliAdi" ColumnName="YetkiliAdi" />
+          <ScalarProperty Name="YetkiliTC" ColumnName="YetkiliTC" />
+          <ScalarProperty Name="KurumAdres" ColumnName="KurumAdres" />
+          <ScalarProperty Name="KurumAdi" ColumnName="KurumAdi" />
+          <ScalarProperty Name="KurumsalGiderlerID" ColumnName="KurumsalGiderlerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Personeller">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_Personeller">
+        <MappingFragment StoreEntitySet="vw_Personeller">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="KanGrubuAdi" ColumnName="KanGrubuAdi" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="MedeniHali" ColumnName="MedeniHali" />
+          <ScalarProperty Name="HesapNumarasi" ColumnName="HesapNumarasi" />
+          <ScalarProperty Name="ilAdi" ColumnName="ilAdi" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Maas" ColumnName="Maas" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="PersonelSoyadi" ColumnName="PersonelSoyadi" />
+          <ScalarProperty Name="PersonelAdi" ColumnName="PersonelAdi" />
+          <ScalarProperty Name="PersonelTC" ColumnName="PersonelTC" />
+          <ScalarProperty Name="PersonellerID" ColumnName="PersonellerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_Randevular">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_Randevular">
+        <MappingFragment StoreEntitySet="vw_Randevular">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="RandevuSaati" ColumnName="RandevuSaati" />
+          <ScalarProperty Name="RandevuTarihi" ColumnName="RandevuTarihi" />
+          <ScalarProperty Name="DoktorAdi" ColumnName="DoktorAdi" />
+          <ScalarProperty Name="KlinikAdi" ColumnName="KlinikAdi" />
+          <ScalarProperty Name="HastaAdi" ColumnName="HastaAdi" />
+          <ScalarProperty Name="RandevularID" ColumnName="RandevularID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw2_DoktorBilgileri">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw2_DoktorBilgileri">
+        <MappingFragment StoreEntitySet="vw2_DoktorBilgileri">
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="AktifMi" ColumnName="AktifMi" />
+          <ScalarProperty Name="CikisTarihi" ColumnName="CikisTarihi" />
+          <ScalarProperty Name="GirisTarihi" ColumnName="GirisTarihi" />
+          <ScalarProperty Name="DoktorAdi" ColumnName="DoktorAdi" />
+          <ScalarProperty Name="DoktorBilgileriID" ColumnName="DoktorBilgileriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_DoktorBilgileri">
+      <EntityTypeMapping TypeName="HastahaneDBModel.vw_DoktorBilgileri">
+        <MappingFragment StoreEntitySet="vw_DoktorBilgileri">
+          <ScalarProperty Name="ilAdi" ColumnName="ilAdi" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="KanGrubuAdi" ColumnName="KanGrubuAdi" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="UnvanAdi" ColumnName="UnvanAdi" />
+          <ScalarProperty Name="DoktorTelefon" ColumnName="DoktorTelefon" />
+          <ScalarProperty Name="DoktorSoyadi" ColumnName="DoktorSoyadi" />
+          <ScalarProperty Name="DoktorAdi" ColumnName="DoktorAdi" />
+          <ScalarProperty Name="DoktorTC" ColumnName="DoktorTC" />
+          <ScalarProperty Name="DoktorlarID" ColumnName="DoktorlarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

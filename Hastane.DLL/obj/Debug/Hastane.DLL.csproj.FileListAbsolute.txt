@@ -1,0 +1,24 @@
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\Hastane.DLL.dll.config
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\Hastane.DLL.dll
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\Hastane.DLL.pdb
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\EntityFramework.dll
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\EntityFramework.xml
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.csprojAssemblyReference.cache
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.csproj.CoreCompileInputs.cache
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.csproj.CopyComplete
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.dll
+D:\USB\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.pdb
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\Hastane.DLL.dll.config
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\Hastane.DLL.dll
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\Hastane.DLL.pdb
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\EntityFramework.dll
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\EntityFramework.xml
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.csprojAssemblyReference.cache
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.csproj.CoreCompileInputs.cache
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.csproj.CopyComplete
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.dll
+D:\USB\Çalışma Sayfaları\Windows Form Çalışma Sayfası\190529_ KatmanlıMimari_HastahaneDB\Hastane.DLL\obj\Debug\Hastane.DLL.pdb
