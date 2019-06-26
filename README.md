@@ -1,1 +1,1 @@
-# Katmanl-Mimari-Hastane-Program-
+# Katmanlı Mimarı Hastane Programı
