@@ -1,4 +1,4 @@
-# Katmanlı Mimarı Hastane Programı
+# Katmanlı Mimari Hastane Programı
 ![1](https://user-images.githubusercontent.com/49581443/60146841-caee0180-97d3-11e9-8936-d8f6d7ae34d3.png)<br>
 ![2](https://user-images.githubusercontent.com/49581443/60146852-d17c7900-97d3-11e9-8039-f8227b8e8fcd.png)<br>
 ![3](https://user-images.githubusercontent.com/49581443/60146854-d2ada600-97d3-11e9-946b-e1c6ceb483a8.png)<br>
