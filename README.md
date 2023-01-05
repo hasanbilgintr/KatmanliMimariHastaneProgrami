@@ -1,10 +1,10 @@
 # Katmanlı Mimari Hastane Programı
-![1](https://user-images.githubusercontent.com/49581443/60146841-caee0180-97d3-11e9-8936-d8f6d7ae34d3.png)<br>
-![2](https://user-images.githubusercontent.com/49581443/60146852-d17c7900-97d3-11e9-8039-f8227b8e8fcd.png)<br>
-![3](https://user-images.githubusercontent.com/49581443/60146854-d2ada600-97d3-11e9-946b-e1c6ceb483a8.png)<br>
-![4](https://user-images.githubusercontent.com/49581443/60146855-d3463c80-97d3-11e9-85b4-2a9a9ae70117.png)<br>
-![5](https://user-images.githubusercontent.com/49581443/60146856-d7725a00-97d3-11e9-9a40-2450e6933d53.png)<br>
-![6](https://user-images.githubusercontent.com/49581443/60146948-2d470200-97d4-11e9-8f9e-4d3aec500eb2.png)<br>
+![1](https://user-images.githubusercontent.com/49581443/60146841-caee0180-97d3-11e9-8936-d8f6d7ae34d3.png)
+![2](https://user-images.githubusercontent.com/49581443/60146852-d17c7900-97d3-11e9-8039-f8227b8e8fcd.png)
+![3](https://user-images.githubusercontent.com/49581443/60146854-d2ada600-97d3-11e9-946b-e1c6ceb483a8.png)
+![4](https://user-images.githubusercontent.com/49581443/60146855-d3463c80-97d3-11e9-85b4-2a9a9ae70117.png)
+![5](https://user-images.githubusercontent.com/49581443/60146856-d7725a00-97d3-11e9-9a40-2450e6933d53.png)
+![6](https://user-images.githubusercontent.com/49581443/60146948-2d470200-97d4-11e9-8f9e-4d3aec500eb2.png)
 ![7](https://user-images.githubusercontent.com/49581443/60146951-2fa95c00-97d4-11e9-9f68-5d4ede4a40b1.png)<br>
 ![8](https://user-images.githubusercontent.com/49581443/60146953-3041f280-97d4-11e9-96f5-d76dd69466d5.png)<br>
 ![9](https://user-images.githubusercontent.com/49581443/60146955-3506a680-97d4-11e9-87f5-dea6345db240.png)<br>
